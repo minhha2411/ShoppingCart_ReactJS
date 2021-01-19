@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -15,6 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
+
 function createData(ID, Email, Name, Address, Total) {
   return {ID, Email, Name, Address, Total };
 }
@@ -22,24 +23,15 @@ function createData(ID, Email, Name, Address, Total) {
 
 
 const  Admin = (props)  =>  {
+
+
   const classes = useStyles();
-  const [orders , setOrders] = useState(props.currentOrder);
-  
-    const order = {
-        ID: orders.id,
-        Email: orders.email,
-        Name: orders.name,
-        Address: orders.address,
-        Total: orders.total
-    }
-    const rows = [
-        createData(order.ID, order.Email, order.Name, order.Address, order.Total)
-    ]
-
- 
-
-
-
+    let orderInLocal = localStorage.getItem('orderProduct');
+    let orderArray = JSON.parse(orderInLocal);
+    let rows = [];
+     rows = orderArray.slice().reverse().map(item => (
+      createData(item.id ,item.email , item.name , item.address , item.total)
+    ));
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">

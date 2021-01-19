@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 const  Cart = (props) =>  {
     let cartItem = props.cartItems;
     let count = 0 ;
+    
     const order = props.currentOrder;
     const [proceed , setProceed] = useState(false);
     const [checkout , setCheckout] = useState(false);

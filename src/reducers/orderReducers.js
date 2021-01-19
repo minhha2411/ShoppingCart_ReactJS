@@ -6,6 +6,7 @@ export const orderReducers = (state= {
     switch (action.type) {
         case ORDER_PRODUCT:
         return {
+            ...state,
             orderProduct: action.payload.orderProduct,
             currentOrder: action.payload.currentOrder
         }
