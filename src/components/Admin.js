@@ -53,7 +53,7 @@ const  Admin = (props)  =>  {
               <TableCell align="right">{row.Email}</TableCell>
               <TableCell align="right">{row.Name}</TableCell>
               <TableCell align="right">{row.Address}</TableCell>
-              <TableCell align="right">{row.Total}</TableCell>
+              <TableCell align="right">{'$' + row.Total}</TableCell>
             </TableRow>
           ))}
         </TableBody>
