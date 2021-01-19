@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    
+body {
+    font-family: 'Montserrat' ,Helvetica,Arial,sans-serif;
+    
+}
+
+
+/* Header */
+.header{
+    width: 100%;
+    /* background-color: #666; */
+    background-color: black;
+    color: white;
+    grid-area: 'header';
+}
+.header ul {
+   
+    margin: 0 0.5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+li {
+    list-style: none;
+}
+
+/* Content */
+.main-content {
+    display: flex;
+}
+.main-left{
+    width: 75%;
+}
+
+/* Filter */
+.filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 0.5rem 0;
+    border-bottom: 1px solid gray;
+    margin: 0 0.5rem;
+}
+.filter > div {
+    flex: 1 1;
+}
+.orderProducts > select ,
+.filterProducts > select {
+    margin-left: 0.5rem;
+}
+
+/* Products */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0 0.5rem 0;
+    margin: 0 0.5rem;
+}
+.item{
+    width: 300px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.item :hover{
+    cursor: pointer;
+}
+.itemImage {
+    width: 95%;
+}
+.itemTitle{
+    padding: 1.5rem 0.2rem;
+    font-size: 1rem;
+}
+.itemTitle:hover{
+    color: palevioletred
+}
+.itemPrice{
+    font-size: 1.5rem;
+}
+
+/*  Cart  */
+.main-right {
+    width: 25%;
+
+}
+.cartEmpty, 
+.numberInCart{
+    padding: 1rem 0 0.5rem 0;
+    border-bottom: 1px solid gray;
+    margin: 0 0.5rem;
+}
+.cartItem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 0;
+}
+.cartItem img{
+    width: 40%;
+    height: 60%;
+}
+.cartItem h5{
+    width: 55%;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+.cartTotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.cartTotal h5{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+/*   Modal */
+.modalContainer {
+    display: flex;    
+}
+.modalImage {
+    min-width: 480px;
+}
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 1.5rem 0;
+}
+.modalHeader button {
+    padding: 0.5rem 1rem;
+}
+.modalSize {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 1.5rem 0 1.5rem 0;
+}
+.buttonSize {
+    padding: 0.5rem 1rem;
+    margin-left: 0.2rem;
+}
+.modalAdd{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.modalAdd h4 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+/* Proceed Form */
+.proceedForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+/* Order  */
+
+.orderHeader {
+    text-align: center;
+    margin-top: 100px;
+}
+.orderMain {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.orderRight {
+    text-align: end;
+}
+
+.orderHeader > :first-child {
+    color: green;
+    font-size: 1.3rem;
+}
+.orderHeader :nth-child(2) {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    color: black;
+    font-size: 1.5rem;
+}
+.orderLeft h4,
+.orderRight h4{
+    margin-bottom: 1rem;
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+.orderCartTitle{
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: start;
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+.orderItem {
+    width: 40%;
+    margin: 0 auto;
+}
+.orderItem h4{
+    font-weight: 450;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+.closeOrder {
+    position: absolute;
+    padding: 10px;
+    top: 30px;
+    right: 30px;
+}
+/*  Footer */
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 3rem;
+    padding: 2rem 0;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
